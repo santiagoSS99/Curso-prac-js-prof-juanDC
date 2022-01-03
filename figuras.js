@@ -11,7 +11,7 @@ function perimetroCuadrado(lado){
 //console.log("El perimetro del cuadrado mide " + perimetroCuadrado);
 
 function areaCuadrado(lado){
-    lado * lado;
+    return lado * lado;
 } 
 //console.log("El area del cuadrado mide " + areaCuadrado + "cm");
 console.groupEnd();
@@ -93,4 +93,48 @@ function calcularAreaCuadrado(){
 
     const area = areaCuadrado(value);
     alert(area);
+}
+
+// TRIANGULO ISOCELES
+
+function calcularAreaTriangulo(){
+    const input = document.getElementById("InputTriangulo");
+    const value = input.value;
+
+    const area = areaTriangulo(value);
+    alert(area);
+}
+
+function calcularPerimetroTriangulo(){
+
+}
+
+function calcularAlturaIsoceles(){
+    const inputA = document.getElementById("InputLadoa");
+    const ladoa = inputA.value;
+    const inputB = document.getElementById("InputLadob");
+    const ladob = inputB.value;
+    const Inputbase = document.getElementById("InputLadoBase");
+    const base = Inputbase.value;
+
+if(ladoa === ladob){
+    if(ladoa > 0 && base > 0){
+        const sumaLados = ladoa + ladob;
+        if (base < sumaLados) {
+            const q = ladoa;
+            const b = base/2;
+            const a = Math.sqrt((q*q)-(b*b));
+            alert("La altura es de: " + a + " cm");
+        }
+        else{
+            alert("La base es mayor o igual a la suma de los dos lados, no existe altura");
+        }
+    }
+    else{
+        alert("Los lados tienen que ser mayor a cero incluyendo la base");
+    }   
+}
+else {
+    alert("Los lados 1 y 2 tienen que ser el mismo tamaño");
+}
 }
