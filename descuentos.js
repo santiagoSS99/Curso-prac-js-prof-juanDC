@@ -1,5 +1,5 @@
-const precioOriginal = 120;
-const descuento = 18
+// const precioOriginal = 120;
+// const descuento = 18
 
 // const porcentajePrecioConDescuento = 100 - descuento;
 // const precioConDescuento = (precio *porcentajePrecioConDescuento)/100
